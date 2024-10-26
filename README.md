@@ -1,4 +1,4 @@
-# Labpy02
+# LAPORAN PRAKTIKUM 2
 
 ## Kasus 1: Program pemesanan tiket bioskop
 
