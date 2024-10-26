@@ -32,7 +32,7 @@ o Dua variabel ditetapkan untuk harga tiket:
 
 - harga_vip = Rp100.000
 
-3.	Logika untuk Menentukan Harga Tiket:
+### 3.	Logika untuk Menentukan Harga Tiket:
 
 o Berdasarkan input dari pengguna, program akan menentukan harga tiket menggunakan blok if-else:
   	
@@ -121,9 +121,9 @@ o	Diskon: 20% (karena status member)
 
 o	Output: Total yang harus dibayar: Rp80.000
 
-### ini flowchart untuk program tersebut
+## ini flowchart untuk program tersebut
 
-![gambar1](?raw=true)
+![gambar1](https://github.com/Raihanardiansyah/Labpy02/blob/main/png/tiket.png?raw=true)
 
 ### dan ini penjelasannya
 
@@ -250,7 +250,6 @@ else:
 
     hasil = "Operator tidak valid!"
 
-
 ### 4. Pembagian dengan Nol:
 
 Dalam operasi pembagian, ada pengecekan apakah angka kedua (pembagi) adalah nol. Jika benar, program akan menampilkan pesan kesalahan karena pembagian dengan nol tidak diperbolehkan:
@@ -309,7 +308,7 @@ Angka kedua
 
 ### Berikut Flowchart untuk Kasus 2
 
-![gambar1](?raw=true)
+![gambar1](https://github.com/Raihanardiansyah/Labpy02/blob/main/png/kalkulator.png?raw=true)
 
 Berikut adalah penjelasan dari flowchart untuk program kalkulator sederhana:
 
