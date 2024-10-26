@@ -15,38 +15,50 @@ Hasil dari progam tersebut
 ### Penjelasan dari program tersebut:
 
 Penjelasan Struktur Program:
+
 1.	Input dari Pengguna:
-    o	Program pertama kali meminta pengguna memasukkan tipe tiket (reguler atau VIP) dan status member (ya atau tidak).
+
+    o Program pertama kali meminta pengguna memasukkan tipe tiket (reguler atau VIP) dan status member (ya atau tidak).
   	
-    o	input("Masukkan tipe tiket (reguler/vip): "): Pengguna diminta memasukkan tipe tiket, yang diubah menjadi huruf kecil dengan .lower() untuk menghindari kesalahan input karena penggunaan huruf besar/kecil.
+    o input("Masukkan tipe tiket (reguler/vip): "): Pengguna diminta memasukkan tipe tiket, yang diubah menjadi huruf kecil dengan .lower() untuk menghindari kesalahan input karena penggunaan huruf besar/kecil.
   	
-    o	input("Apakah Anda member? (ya/tidak): "): Pengguna diminta memasukkan status member.
+    o input("Apakah Anda member? (ya/tidak): "): Pengguna diminta memasukkan status member.
 
 2.	Harga Tiket:
 
-    o	Dua variabel ditetapkan untuk harga tiket:
+    o Dua variabel ditetapkan untuk harga tiket:
+  	
 	harga_reguler = Rp50.000
 
 	harga_vip = Rp100.000
 
 3.	Logika untuk Menentukan Harga Tiket:
 
-    o	Berdasarkan input dari pengguna, program akan menentukan harga tiket menggunakan blok if-else:
+    o Berdasarkan input dari pengguna, program akan menentukan harga tiket menggunakan blok if-else:
   	
 python
+
 Salin kode
+
 if tipe_tiket == "reguler":
+
     harga_tiket = harga_reguler
+    
 elif tipe_tiket == "vip":
+
     harga_tiket = harga_vip
+    
 else:
+
     print("Tipe tiket tidak valid!")
+    
     exit()
+
     
-    o	Jika pengguna memilih "reguler", maka harga tiket akan ditetapkan sebagai Rp50.000. Jika memilih "VIP", harganya Rp100.000.
-    
-    o	Jika input yang dimasukkan tidak sesuai ("reguler" atau "vip"), program akan menampilkan pesan "Tipe tiket tidak valid!" dan menghentikan program dengan exit().
-    
+o Jika pengguna memilih "reguler", maka harga tiket akan ditetapkan sebagai Rp50.000. Jika memilih "VIP", harganya Rp100.000.
+  
+o Jika input yang dimasukkan tidak sesuai ("reguler" atau "vip"), program akan menampilkan pesan "Tipe tiket tidak valid!" dan menghentikan program dengan exit().
+
 4.	Menghitung Diskon:
 
     o	Diskon hanya diberikan jika pengguna memiliki status member, yaitu 20% dari harga tiket.
@@ -54,28 +66,35 @@ else:
     o	Untuk menentukan apakah pengguna mendapat diskon, digunakan operator ternary:
   	
 python
+
 Salin kode
+
 diskon = 0.2 if member == "ya" else 0
 
-o	Jika status member "ya", diskon diatur menjadi 0.2 (20%), jika tidak, diskon diatur menjadi 0 (tidak ada diskon).
+o Jika status member "ya", diskon diatur menjadi 0.2 (20%), jika tidak, diskon diatur menjadi 0 (tidak ada diskon).
 
 5.	Menghitung Total Harga:
 
-  	o	Total harga dihitung dengan mengurangi diskon dari harga tiket:
+o Total harga dihitung dengan mengurangi diskon dari harga tiket:
+  	
 python
 
 Salin kode
+
 total_harga = harga_tiket * (1 - diskon)
 
-    o	Jika pengguna bukan member, diskon bernilai 0, sehingga total harga adalah harga tiket penuh. Jika pengguna adalah member, diskon 20% diterapkan.
+o Jika pengguna bukan member, diskon bernilai 0, sehingga total harga adalah harga tiket penuh. Jika pengguna adalah member, diskon 20% diterapkan.
     
 6.	Output Total Harga:
 
-    o	Setelah menghitung total harga, program menampilkan hasil dengan format:
+o Setelah menghitung total harga, program menampilkan hasil dengan format:
   	
 python
+
 Salin kode
+
 print(f"Total yang harus dibayar: Rp{total_harga}")
+
 Contoh Jalannya Program:
 
 •	Contoh 1:
@@ -111,42 +130,41 @@ Berikut adalah penjelasan dari flowchart sistem pemesanan tiket bioskop yang men
 
 1. Mulai (Start):
 
-Flowchart dimulai dengan titik awal, yang menunjukkan bahwa program siap berjalan.
+- Flowchart dimulai dengan titik awal, yang menunjukkan bahwa program siap berjalan.
 
 2. Input Tipe Tiket:
 
-Pengguna diminta untuk memasukkan tipe tiket yang diinginkan, apakah reguler atau VIP.
+- Pengguna diminta untuk memasukkan tipe tiket yang diinginkan, apakah reguler atau VIP.
 
-Pada langkah ini, flowchart mengarah ke proses untuk mengecek apakah tipe tiket valid.
+- Pada langkah ini, flowchart mengarah ke proses untuk mengecek apakah tipe tiket valid.
 
 3. Pengecekan Validitas Tipe Tiket (Decision Point):
 
 Di sini ada keputusan dengan dua cabang:
 
-Ya (Valid): Jika pengguna memasukkan tipe tiket yang benar (reguler atau VIP), alur akan berlanjut ke langkah berikutnya.
+- Ya (Valid): Jika pengguna memasukkan tipe tiket yang benar (reguler atau VIP), alur akan berlanjut ke langkah berikutnya.
 
-Tidak (Tidak Valid): Jika tipe tiket tidak sesuai (misalnya pengguna memasukkan sesuatu selain "reguler" atau "VIP"), program akan menampilkan error dan berakhir (exit).
+- Tidak (Tidak Valid): Jika tipe tiket tidak sesuai (misalnya pengguna memasukkan sesuatu selain "reguler" atau "VIP"), program akan menampilkan error dan berakhir (exit).
 
 4. Input Status Member:
 
-Setelah tipe tiket diterima sebagai valid, pengguna diminta untuk memasukkan status apakah mereka memiliki kartu member atau tidak (ya atau tidak).
-
+- Setelah tipe tiket diterima sebagai valid, pengguna diminta untuk memasukkan status apakah mereka memiliki kartu member atau tidak (ya atau tidak).
 
 5. Pengecekan Status Member (Decision Point):
 
 Di sini ada keputusan dengan dua cabang:
 
-Ya (Member): Jika pengguna adalah member, alur berlanjut ke perhitungan harga tiket dengan diskon.
+- Ya (Member): Jika pengguna adalah member, alur berlanjut ke perhitungan harga tiket dengan diskon.
 
-Tidak (Non-Member): Jika pengguna bukan member, alur berlanjut ke perhitungan harga tanpa diskon.
+- Tidak (Non-Member): Jika pengguna bukan member, alur berlanjut ke perhitungan harga tanpa diskon.
 
 6. Menghitung Harga Tiket:
 
 Setelah mengetahui tipe tiket dan status member, program akan menghitung harga tiket:
 
-Harga Reguler: Jika pengguna memilih tiket reguler, harga ditetapkan Rp50.000.
+ - Harga Reguler: Jika pengguna memilih tiket reguler, harga ditetapkan Rp50.000.
 
-Harga VIP: Jika pengguna memilih tiket VIP, harga ditetapkan Rp100.000.
+ - Harga VIP: Jika pengguna memilih tiket VIP, harga ditetapkan Rp100.000.
 
 7. Menghitung Diskon (Jika Member):
 
@@ -182,9 +200,11 @@ Program pertama-tama meminta pengguna untuk memasukkan dua angka dan satu operat
 
 Fungsi input() digunakan untuk mengambil data dari pengguna, dan angka tersebut diubah menjadi tipe float agar bisa melakukan operasi matematika:
 
-angka1 = float(input("Masukkan angka pertama: "))
-angka2 = float(input("Masukkan angka kedua: "))
-operator = input("Masukkan operator (+, -, *, /): ")
+- angka1 = float(input("Masukkan angka pertama: "))
+  
+- angka2 = float(input("Masukkan angka kedua: "))
+  
+- operator = input("Masukkan operator (+, -, *, /): ")
 
 2. Pemilihan Operator (if-elif-else):
 
@@ -193,24 +213,31 @@ Setelah mendapatkan input operator, program menggunakan struktur if-elif-else un
 If: Jika operator yang dimasukkan adalah +, maka operasi penjumlahan dilakukan:
 
 if operator == "+":
+
     hasil = angka1 + angka2
 
 Elif: Jika operator -, maka dilakukan pengurangan:
 
 elif operator == "-":
+
     hasil = angka1 - angka2
 
 Elif: Jika operator *, maka dilakukan perkalian:
 
 elif operator == "*":
+
     hasil = angka1 * angka2
 
 Elif: Jika operator /, dilakukan pembagian, tetapi dengan pengecekan tambahan apakah angka kedua adalah nol, karena pembagian dengan nol tidak diperbolehkan:
 
 elif operator == "/":
+
     if angka2 != 0:
+    
         hasil = angka1 / angka2
+        
     else:
+    
         hasil = "Kesalahan: Tidak bisa membagi dengan nol!"
 
 
@@ -219,6 +246,7 @@ elif operator == "/":
 Jika pengguna memasukkan operator yang tidak valid (misalnya karakter selain +, -, *, /), program akan menampilkan pesan error:
 
 else:
+
     hasil = "Operator tidak valid!"
 
 
@@ -227,8 +255,11 @@ else:
 Dalam operasi pembagian, ada pengecekan apakah angka kedua (pembagi) adalah nol. Jika benar, program akan menampilkan pesan kesalahan karena pembagian dengan nol tidak diperbolehkan:
 
 if angka2 != 0:
+
     hasil = angka1 / angka2
+    
 else:
+
     hasil = "Kesalahan: Tidak bisa membagi dengan nol!"
 
 Pengecekan ini penting untuk mencegah kesalahan perhitungan dan menjaga integritas program.
@@ -297,41 +328,41 @@ Setelah memasukkan angka pertama, pengguna diminta untuk memasukkan angka kedua.
 
 Pengguna kemudian diminta memasukkan operator aritmatika. Operator ini bisa berupa salah satu dari empat pilihan berikut:
 
-+ untuk penjumlahan
+- untuk penjumlahan +
 
-- untuk pengurangan
+- untuk perkurangan -
 
-* untuk perkalian
+- untuk perkalian *
 
-/ untuk pembagian
+- untuk pembagian /
 
 5. Pengecekan Operator Valid atau Tidak (Decision Point):
 
 Di titik ini, program memeriksa apakah operator yang dimasukkan valid (yaitu salah satu dari +, -, *, atau /).
 
-Jika operator valid, alur lanjut ke langkah selanjutnya untuk melakukan operasi.
+- Jika operator valid, alur lanjut ke langkah selanjutnya untuk melakukan operasi.
 
-Jika tidak valid, program akan menampilkan pesan "Operator tidak valid" dan mengakhiri proses.
+- Jika tidak valid, program akan menampilkan pesan "Operator tidak valid" dan mengakhiri proses.
 
 6. Pengecekan Pembagian dengan Nol (Decision Point):
 
-Jika pengguna memilih operator / (pembagian), program harus mengecek apakah angka kedua adalah nol.
+- Jika pengguna memilih operator / (pembagian), program harus mengecek apakah angka kedua adalah nol.
 
-Jika angka kedua bukan nol, operasi pembagian akan dilakukan.
+- Jika angka kedua bukan nol, operasi pembagian akan dilakukan.
 
-Jika angka kedua adalah nol, program akan menampilkan pesan "Tidak bisa membagi dengan nol" dan menghentikan proses.
+- Jika angka kedua adalah nol, program akan menampilkan pesan "Tidak bisa membagi dengan nol" dan menghentikan proses.
 
 7. Operasi Aritmatika:
 
 Program akan menjalankan operasi aritmatika sesuai dengan operator yang dimasukkan:
 
-Penjumlahan jika operator adalah +.
+- Penjumlahan jika operator adalah +.
 
-Pengurangan jika operator adalah -.
+- Pengurangan jika operator adalah -.
 
-Perkalian jika operator adalah *.
+- Perkalian jika operator adalah *.
 
-Pembagian jika operator adalah / dan angka kedua bukan nol.
+- Pembagian jika operator adalah / dan angka kedua bukan nol.
 
 8. Tampilkan Hasil:
 
